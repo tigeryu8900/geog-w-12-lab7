@@ -7,18 +7,18 @@ if(length(new.packages)) install.packages(new.packages)
 
 library(leaflet)
 
-my.path = '/Users/mikejohnson/Desktop/W12_test/assignment.csv'
+my.path = 'assignment.csv'
 
 df = read.csv(my.path)
 
 popup <- paste("<div class='leaflet-popup-scrolled' style='max-width:600px;max-height:300px'><b>",
-               '<a href=', df$url, ' target="_blank"> <h2 align="center"><strong>', df$Name, "</strong></h2></a><br>",
-               "</b>", df$Des, '<br><br><center><img src="', df$image, '" height="150px" width="200px" border="8"></center><br> </div>')
+               '<a href=', df$InfoURL, ' target="_blank"> <h2 align="center"><strong>', df$Name, "</strong></h2></a><br>",
+               "</b>", df$Description, '<br><br><center><img src="', df$ImageURL, '" height="150px" width="200px" border="8"></center><br> </div>')
 
 
 map = leaflet() %>%
     addTiles( ) %>%
-    addMarkers(data = df, lat = df$lat, lng = df$lon, popup = popup )
+    addMarkers(data = df, lat = df$Latitude, lng = df$Longitude, popup = popup )
 
 map
 
