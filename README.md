@@ -1,3 +1,3 @@
 # My Favorite Places
 
-Mike Johnson's assignment for Spring Quarter 2019 (TA Marcela) - example files
+Tiger Yu's assignment for Fall Quarter 2022 (TA Goss)
